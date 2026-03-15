@@ -8,6 +8,6 @@ public class Email: INotificacao
 {
     public void Enviar()
     {
-        ConsoleTraceListener.WriteLIne("Email enviado");
+        ConsoleTraceListener.WriteLine("Email enviado");
     }
 }
