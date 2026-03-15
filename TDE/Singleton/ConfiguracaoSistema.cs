@@ -17,7 +17,7 @@ public class ConfiguracaoSistema{
         {
             instancia = new ConfiguracaoSistema();
         }
-        return instancia
+        return instancia;
     }
 
 }
