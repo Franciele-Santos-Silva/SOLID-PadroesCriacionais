@@ -2,7 +2,7 @@ namespace Singleton
 {
     public class ConfiguracaoSistema
     {
-        private static ConfiguracaoSistema instancia;
+        private static ConfiguracaoSistema? instancia;
 
         public string NomeSistema { get; private set; }
         public string Versao { get; private set; }
