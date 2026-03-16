@@ -2,17 +2,22 @@
 using Services;
 using Singleton;
 
-class Program{
-
-    static void Main(string[] args){
-    
+class Program
+{
+    static void Main(string[] args)
+    {
         var config = ConfiguracaoSistema.GetInstancia();
-        console.WriteLine($"Sistema: {config.NomeSistema} - Versão {config.Versao}\n");
+        Console.WriteLine($"Sistema: {config.NomeSistema} - Versão: {config.Versao}");
+        Console.WriteLine();
 
-        var service = new NotificacaoService();
+        var servico = new NotificacaoService();
 
-        service.EnviarNotificacao("email");
-        service.EnviarNotificacao("sms");
-        service.EnviarNotificacao("whatsapp");
+        string[] tipos = { "SMS", "Email", "WhatsApp" };
+        foreach (var tipo in tipos)
+        {
+            Console.WriteLine($"Enviando {tipo}:");
+            servico.EnviarNotificacao(tipo);
+            Console.WriteLine();
+        }
     }
 }
