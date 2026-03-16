@@ -1,9 +1,13 @@
 using Interfaces;
+using System;
 
-public class SMS: INotificacao
+namespace Models
 {
-    public void Enviar()
+    public class SMS : INotificacao
     {
-        console.WriteLine("SMS enviado");
+        public void Enviar()
+        {
+            Console.WriteLine("Enviando SMS...");
+        }
     }
 }

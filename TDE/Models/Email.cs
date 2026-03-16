@@ -1,12 +1,13 @@
 using Interfaces;
+using System;
 
-namespace Models{
-
-    public class Email: INotificacao
+namespace Models
+{
+    public class Email : INotificacao
     {
         public void Enviar()
         {
-            ConsoleTraceListener.WriteLine("Email enviado");
+            Console.WriteLine("Enviando Email...");
         }
     }
 }

@@ -1,11 +1,13 @@
 using Interfaces;
+using System;
 
-public class WhatsApp: INotificacao
+namespace Models
 {
-    public void Enviar()
+    public class WhatsApp : INotificacao
     {
-        console.WriteLine("Mensagem enviada pelo WhatsApp");
+        public void Enviar()
+        {
+            Console.WriteLine("Enviando WhatsApp...");
+        }
     }
 }
-
-// OCP - Open/Closed Principle)
