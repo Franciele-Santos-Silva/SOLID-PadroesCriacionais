@@ -7,7 +7,7 @@ namespace Models
     {
         public void Enviar()
         {
-            Console.WriteLine("Enviando WhatsApp...");
+            Console.WriteLine("Mensagem via WhatsApp enviada");
         }
     }
 }

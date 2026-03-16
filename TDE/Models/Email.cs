@@ -7,7 +7,7 @@ namespace Models
     {
         public void Enviar()
         {
-            Console.WriteLine("Enviando Email...");
+            Console.WriteLine("Email enviado");
         }
     }
 }

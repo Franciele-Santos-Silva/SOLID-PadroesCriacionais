@@ -7,7 +7,7 @@ namespace Models
     {
         public void Enviar()
         {
-            Console.WriteLine("Enviando SMS...");
+            Console.WriteLine("SMS enviado");
         }
     }
 }
