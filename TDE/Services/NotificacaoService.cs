@@ -1,14 +1,21 @@
+using System;
 using Interfaces;
 using Factories;
 
-namespace Services{
+namespace Services
+{
+    public class NotificacaoService
+    {
+        public void EnviarNotificacao(string tipo)
+        {
+            if (!Enum.TryParse<TipoNotificacao>(tipo, true, out var tipoEnum))
+            {
+                throw new ArgumentException($"Tipo de notificação inválido: {tipo}");
+            }
 
-    public class NotificacaoService{
+            INotificacao notificacao = NotificacaoFactory.CriarNotificacao(tipoEnum);
 
-        public void EnviarNotificacao(string tipo){
-            
-                INotificacao notificação = NotificacaoFactory.Criar(tipo);
-                notificação.Enviar();
+            notificacao.Enviar();
         }
     }
 }
