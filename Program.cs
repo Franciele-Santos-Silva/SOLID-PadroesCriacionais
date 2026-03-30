@@ -7,15 +7,15 @@ class Program
     static void Main(string[] args)
     {
         var config = ConfiguracaoSistema.GetInstancia();
-        Console.WriteLine("🚀 SISTEMA DE NOTIFICAÇÕES - Factory Method + SOLID");
-        Console.WriteLine($"📋 {config.NomeSistema} - Versão: {config.Versao}");
+        Console.WriteLine("SISTEMA DE NOTIFICAÇÕES - Factory Method + SOLID");
+        Console.WriteLine($"{config.NomeSistema} - Versão: {config.Versao}");
         Console.WriteLine();
 
         var servico = new NotificacaoService();
 
         while (true)
         {
-            Console.WriteLine("📱 Selecione tipo de notificação:");
+            Console.WriteLine("Selecione tipo de notificação:");
             Console.WriteLine("1 - SMS");
             Console.WriteLine("2 - Email");
             Console.WriteLine("3 - WhatsApp");
@@ -27,22 +27,22 @@ class Program
             switch (opcao)
             {
                 case "1":
-                    Console.WriteLine("📤 Enviando SMS:");
+                    Console.WriteLine("Enviando SMS:");
                     servico.EnviarNotificacao("SMS");
                     break;
                 case "2":
-                    Console.WriteLine("📧 Enviando Email:");
+                    Console.WriteLine("Enviando Email:");
                     servico.EnviarNotificacao("Email");
                     break;
                 case "3":
-                    Console.WriteLine("💬 Enviando WhatsApp:");
+                    Console.WriteLine("Enviando WhatsApp:");
                     servico.EnviarNotificacao("WhatsApp");
                     break;
                 case "0":
-                    Console.WriteLine("👋 Até logo!");
+                    Console.WriteLine("Até logo!");
                     return;
                 default:
-                    Console.WriteLine("❌ Opção inválida!");
+                    Console.WriteLine("Opção inválida!");
                     break;
             }
             Console.WriteLine();
